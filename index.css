@@ -1,16 +1,13 @@
 
 
 
-*{
+:root{
 	--color-background: #fff;
-
 	--color-right: #02800024;
 	--color-top-img: #02800040;
-
 	--color-name: #565656;
-
-
 	--colo-brg-icon_infor: #0080005e;
+	--color-text : #000
 }
 
 
@@ -99,10 +96,12 @@ img{
 	transform: translateX(-50%);
 	left: 50%;
 }
-.name span{
+.name h5{
 	font-weight: bold;
 	font-size: 22px;
 	color: var(--color-name);
+	text-align: center;
+	width: 200px;
 }
 
 
@@ -118,12 +117,25 @@ img{
 	position: absolute;
 	transform: translateY(-50%);
 	top: 50%;
-	left: 20px;
+	left: 15px;
 	background-color: var(--colo-brg-icon_infor);
 	border-radius: 50px;
 	/*background-image: linear-gradient(var(--colo-brg-icon_infor),var(--color-right));*/
 	animation: moveToptoBottom 1s ease-out;
 }
+
+.infor{
+
+	height: 300px;
+	width: 80%;
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	left: 70px;
+	
+}
+
+
 ul{
 	list-style: none;
 	padding: 0;
@@ -131,10 +143,18 @@ ul{
 	align-items: center;
 	text-align: center;
 }
+.icon_infor ul li{
+	
+	width: 37px;
+	
+	
+}
+
+
+
 ul li{
 	
 	height: 37px;
-	width: 37px;
 	background-color: var(--color-top-img);
 	align-items: center;
 	text-align: center;
@@ -146,6 +166,69 @@ ul li{
 
 ul li i{
 	margin-top: 10px;
+	color: var(--color-text);
+}
+
+.infor ul li{
+	text-align: left;
+	position: relative;
+
+
+}
+.infor ul li .title_info{
+	font-size: 13px;
+	font-weight: 700;
+	margin-left: 20px;
+	top: 50%;
+	position: absolute;
+	transform: translateY(-50%);
+	color: var(--color-text);
+}
+.infor_li{
+	font-size: 13px;
+	
+	top: 50%;
+	transform: translateY(-50%);
+	font-weight: 500;
+	text-overflow: ellipsis;
+	color: var(--color-text);
+}
+
+.cusor{
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.item{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 300px;
+	width: 500px;
+	box-shadow: 0px 0px 10px 3px var(--color-top-img);
+	z-index: 30;
+	background-color: var(--color-background);
+	border-radius: 5px;
+
+}
+
+.left_item{
+	border: 1px solid gray;
+	height: 250px;
+	width: 250px;
+	margin-top: 25px;
+	margin-left: 25px;
+	border-radius: 5px;
+	z-index: 1000;
+	background-color: var(--color-background);
 }
 
 
@@ -161,12 +244,12 @@ ul li i{
 }
 @media ((min-width: 768px)){
 	.contamin-widthiner {
-		width: 70%;
+		width: 65%;
 	}
 }
 @media (min-width: 576px){
 	.container {
-		 width: 60%;
+		 width: 65%;
 	}
 }
 
