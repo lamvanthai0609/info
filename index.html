@@ -32,7 +32,7 @@
 
 					<div class="back_top_img"></div>
 					<div class="img">
-						<img src="./asset/img/imgAvata.jpg" alt="anh">
+						<img src="./asset/img/imgAvata.jpg" id="anhdeptrai" alt="anh">
 					</div>
 					<div class="name">
 						<h5>LÂM VĂN THÁI</h5>
@@ -76,8 +76,31 @@
 		</div>
 	</div>
 
+
+
+	<audio id="nhac">
+	  <source src="https://vnno-vn-6-tf-mp3-320s1-zmp3.zadn.vn/c2ab9a67ea2603785a37/8361324427520262837?authen=exp=1648981737~acl=/c2ab9a67ea2603785a37/*~hmac=c21e259b4b523932ad639700b9be3660&fs=MTY0ODgwODkzNzI2MXx3ZWJWNnwxMDEzMTE5NDU4fDExNy40LjI0NC41OA" type="audio/mpeg">	
+	</audio>
+
 	<script type="text/javascript">
 		
+		var isPlay = false;
+		document.getElementById("anhdeptrai").addEventListener("click",()=>{
+
+			if(isPlay)
+			{
+				document.getElementById("nhac").pause();
+				isPlay = false;
+			}
+			else
+			{
+				const x = document.getElementById("nhac");
+				x.play();
+				isPlay = true;
+
+			}	
+		});
+
 		document.getElementById("quequan").addEventListener("click",()=>{
 
 			if(document.getElementById("box_item").style.display == "none")
